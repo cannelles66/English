@@ -1,0 +1,17 @@
+{
+  "name": "English Coach",
+  "short_name": "English Coach",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f8fc",
+  "theme_color": "#101827",
+  "description": "Apprends l'anglais à ton rythme.",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

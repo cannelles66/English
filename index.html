@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="English Coach — apprends l'anglais à ton rythme.">
+  <title>English Coach — Apprendre l'anglais</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="English Coach accueil"><span class="brand-mark">E</span><span>English<span class="brand-light">Coach</span></span></a>
+      <div class="side-label">APPRENTISSAGE</div>
+      <nav class="nav">
+        <button class="nav-item active" data-view="dashboard"><span>⌂</span> Tableau de bord</button>
+        <button class="nav-item" data-view="vocabulary"><span>▤</span> Vocabulaire</button>
+        <button class="nav-item" data-view="grammar"><span>▧</span> Grammaire</button>
+        <button class="nav-item" data-view="verbs"><span>↗</span> Verbes irréguliers</button>
+        <button class="nav-item" data-view="quiz"><span>✦</span> Quiz</button>
+        <button class="nav-item" data-view="conversation"><span>◉</span> Conversation IA</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="streak-card"><div class="streak-icon">🔥</div><div><strong id="streak-count">1 jour</strong><small>Continue comme ça !</small></div></div>
+        <p class="side-foot">Apprends un peu chaque jour.<br>Chaque mot compte.</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-brand" data-view="dashboard"><span class="brand-mark">E</span> English Coach</button>
+        <div class="topbar-right">
+          <span class="today" id="today-label"></span>
+          <div class="avatar">U</div>
+        </div>
+      </header>
+      <div class="content" id="app-content">
+        <section class="welcome-row">
+          <div><p class="eyebrow">TON ESPACE D'APPRENTISSAGE</p><h1>Bonjour et bienvenue ! <span>👋</span></h1><p class="muted">Prêt à progresser en anglais aujourd'hui ?</p></div>
+          <div class="level-pill"><span class="level-dot"></span><span id="current-level-label">Niveau A1 · Débutant</span></div>
+        </section>
+
+        <section class="hero-card">
+          <div class="hero-copy"><span class="hero-kicker">TON OBJECTIF DU JOUR</span><h2>Small steps.<br><em>Big progress.</em></h2><p>Quelques minutes par jour suffisent pour faire grandir ton anglais.</p><button class="btn btn-white" data-action="start-quiz">Commencer un quiz <span>→</span></button></div>
+          <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="book">A<span>B</span>C</div><div class="spark s1">✦</div><div class="spark s2">✧</div><div class="floating-word">HELLO!</div></div>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card"><div class="stat-icon purple">▤</div><div><small>Mots appris</small><strong id="words-stat">0</strong><span class="stat-note">Dans ton vocabulaire</span></div></article>
+          <article class="stat-card"><div class="stat-icon orange">✦</div><div><small>Quiz terminés</small><strong id="quizzes-stat">0</strong><span class="stat-note">Continue à t'entraîner</span></div></article>
+          <article class="stat-card"><div class="stat-icon green">◷</div><div><small>Temps d'étude</small><strong id="minutes-stat">0 min</strong><span class="stat-note">Depuis tes débuts</span></div></article>
+        </section>
+
+        <section class="section-block"><div class="section-heading"><div><p class="eyebrow">TON PARCOURS</p><h2>Choisis ton niveau</h2></div><span class="muted small">5 étapes pour devenir à l'aise</span></div><div class="levels-grid" id="levels-grid"></div></section>
+        <section class="bottom-grid">
+          <article class="panel"><div class="section-heading"><div><p class="eyebrow">REPRENDRE</p><h3>Apprendre aujourd'hui</h3></div><span class="panel-icon">✧</span></div><div class="quick-list">
+            <button class="quick-item" data-view="vocabulary"><span class="quick-icon purple">▤</span><span><b>Enrichir mon vocabulaire</b><small>Découvre de nouveaux mots</small></span><span class="arrow">→</span></button>
+            <button class="quick-item" data-view="verbs"><span class="quick-icon orange">↗</span><span><b>Réviser les verbes</b><small>Maîtrise les formes irrégulières</small></span><span class="arrow">→</span></button>
+            <button class="quick-item" data-view="conversation"><span class="quick-icon green">◉</span><span><b>Parler avec l'assistant</b><small>Pratique en situation réelle</small></span><span class="arrow">→</span></button>
+          </div></article>
+          <article class="quote-card"><span class="quote-mark">“</span><blockquote>One language sets you in a corridor for life. Two languages open every door along the way.</blockquote><p>— Frank Smith</p><div class="quote-decoration">ENGLISH IS YOURS</div></article>
+        </section>
+        <footer>© 2026 English Coach <span>Made for your progress.</span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
